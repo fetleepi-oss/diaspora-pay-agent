@@ -1,0 +1,6 @@
+{
+  "name": "DiasporaPay Agent",
+  "description": "AI agent helping Ethiopian diaspora send groceries, school supplies, utility bill payments, and ride credits to family back home in Ethiopia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

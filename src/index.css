@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-cream: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-muted: #F5F2EC;
+  --text-charcoal: #1C1917;
+  --text-muted: #57534E;
+  --primary-emerald: #047857;
+  --primary-emerald-dark: #065F46;
+  --accent-gold: #D97706;
+  --warning-coral: #E11D48;
+  --border-subtle: #E7E5E4;
+}
+
+.dark {
+  --bg-cream: #0F1412;
+  --bg-surface: #18201D;
+  --bg-surface-muted: #212C28;
+  --text-charcoal: #F5F5F4;
+  --text-muted: #A8A29E;
+  --primary-emerald: #10B981;
+  --primary-emerald-dark: #059669;
+  --accent-gold: #F59E0B;
+  --warning-coral: #FB7185;
+  --border-subtle: #2C3A35;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Ethiopic', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-charcoal);
+  line-height: 1.6;
+}
+
+/* Subtle Ethiopian Tibeb-inspired geometric stripe (CSS-only) */
+.tibeb-stripe {
+  height: 6px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #047857 0px,
+    #047857 18px,
+    #F59E0B 18px,
+    #F59E0B 24px,
+    #FFFFFF 24px,
+    #FFFFFF 28px,
+    #BE123C 28px,
+    #BE123C 36px,
+    #F59E0B 36px,
+    #F59E0B 40px
+  );
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
